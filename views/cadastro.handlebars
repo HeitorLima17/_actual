@@ -1,0 +1,189 @@
+<form action="/user" method="post">
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Painel de Cadastros</h1>
+            <p class="lead">Preencha todos os Campos Abaixo</p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+
+    <div>
+        <main>
+            <a href="/" type="button" class="btn btn-primary">Voltar Para Pagina Principal <svg width="1em" height="1em"
+                    viewBox="0 0 16 16" class="bi bi-caret-left-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                </svg></a>
+
+        </main>
+    </div>
+
+
+    <body>
+        <main>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+                crossorigin="anonymous"></script>
+        </main>
+    </body>
+
+
+
+    <div>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Código</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="colFormLabel" placeholder="Coloque o código aqui!">
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Descrição</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="colFormLabel" placeholder="Coloque a descrição aqui!">
+        </div>
+    </div>
+    <br>
+
+
+    <div>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">N° do pedido</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="colFormLabel" placeholder="Coloque o número do pedido aqui!">
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Ordem de Compra</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="colFormLabel" placeholder="Coloque a ordem de compra aqui!">
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Valor</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="colFormLabel" placeholder="Coloque a ordem de compra aqui!">
+        </div>
+    </div>
+
+
+
+
+
+    <br>
+    <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <div class="col-sm-10">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Cliente</label>
+                <div class="col-sm-10">
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Selecione o Cliente</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                </div>
+            </div>
+            </select>
+        </div>
+    </div>
+
+    <br>
+
+
+
+    <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <div class="col-sm-10">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Montador</label>
+                <div class="col-sm-10">
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Selecione o Montador</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                </div>
+            </div>
+            </select>
+        </div>
+    </div>
+
+
+    <br>
+
+
+
+
+
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Data do Pedido</label>
+    <div class="col-sm-10">
+        <input type="date" class="form-control" id="data" />
+
+        <br>
+
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Data da Previsão</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" id="dataProximoMes" />
+
+            <script>
+                //pega a data do pc
+                const dataProximoMes = new Date(Date.now());
+                const dataDoMes = new Date(Date.now());
+
+                //somando mais um no mes 'dataProximoMes'
+                dataProximoMes.setMonth(dataProximoMes.getMonth() + 1);
+                dataDoMes.setMonth(dataDoMes.getMonth());
+
+
+                //invertendo a data
+                const data = `${dataProximoMes.getFullYear()}-${dataProximoMes.getMonth()}-${dataProximoMes.getDate()}`;
+                const data1 = `${dataProximoMes.getFullYear()}-${dataProximoMes.getMonth() + 1}-${dataProximoMes.getDate()}`;
+
+                //Busca o campo pelo ID e adiciona o valor inicial
+                const input = document.getElementById('dataProximoMes').value = data1
+                const i = document.getElementById('data').value = data
+            </script>
+
+            <br>
+
+            <div>
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Observação</label>
+                <textarea cols="100" rows="10" placeholder="OBSERVAÇÃO"></textarea>
+            </div>
+
+
+
+            <br>
+
+            <main>
+                <button type="button" class="btn btn-success">Salvar <svg width="1em" height="1em" viewBox="0 0 16 16"
+                        class="bi bi-check-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg></button>
+
+            </main>
+            <br>
+
+
+
+
+</form>
